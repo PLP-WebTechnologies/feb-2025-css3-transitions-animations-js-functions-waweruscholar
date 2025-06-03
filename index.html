@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Animations & JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS3 Animations Demo</h1>
+        
+        <!-- User Preferences Section -->
+        <div class="preferences">
+            <h3>User Preferences</h3>
+            <div class="preference-item">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" placeholder="Enter your name">
+                <button class="btn" onclick="saveUserName()">Save</button>
+            </div>
+            <div class="preference-item">
+                <label for="themeSelect">Choose Theme:</label>
+                <select id="themeSelect" onchange="changeTheme()">
+                    <option value="blue">Blue Theme</option>
+                    <option value="red">Red Theme</option>
+                    <option value="green">Green Theme</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Animation Control Buttons -->
+        <div class="controls">
+            <button class="btn animate-btn" onclick="animateBox()">Animate Box</button>
+            <button class="btn animate-btn" onclick="bounceImage()">Bounce Image</button>
+            <button class="btn animate-btn" onclick="rotateButton()">Rotate Button</button>
+            <button class="btn animate-btn" onclick="showMessage()">Show Message</button>
+        </div>
+
+        <!-- Elements to Animate -->
+        <div class="animation-area">
+            <div class="box" id="animatedBox">
+                <p>Animated Box</p>
+            </div>
+            
+            <img src="https://via.placeholder.com/150/4285f4/ffffff?text=Image" 
+                 alt="Sample Image" 
+                 class="sample-image" 
+                 id="bouncingImage">
+            
+            <button class="rotating-btn" id="rotatingButton">
+                Click to Rotate Me!
+            </button>
+        </div>
+
+        <!-- Message Display -->
+        <div class="message" id="messageDisplay" style="display: none;">
+            <p>Hello! Your preferences have been saved.</p>
+        </div>
+
+        <!-- Welcome Message -->
+        <div class="welcome" id="welcomeMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
